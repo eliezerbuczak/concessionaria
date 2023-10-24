@@ -1,3 +1,72 @@
-<h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1>
+<body class="w-full flex flex-col min-h-screen relative">
+<app-header></app-header>
+<main class="mb-14">
+  <div class="w-full bg-no-repeat bg-cover bg-fixed"
+       style="background-image: url('/src/assets/resources/images/capa.jpg')">
+    <div class="w-8/12 flex flex-col mx-auto py-20">
+      <div class="mx-auto">
+        <h1 class="text-white text-3xl font-semibold">Encontre o seu <span
+          class="text-yellow">AUTOMÓVEL</span> dos <span class="text-yellow">SONHOS</span></h1>
+      </div>
+      <div class="flex flex-row mx-auto space-x-12 mt-8 text-white">
+        <div>
+          <input class="hidden peer/todos" type="radio" name="estado" id="todos" value="todos" checked>
+          <label for="todos"
+                 class="hover:cursor-pointer hover:text-yellow peer-checked/todos:text-yellow">Todos</label>
+        </div>
+        <div>
+          <input class="hidden peer/novos" type="radio" name="estado" value="novo" id="novos">
+          <label for="novos"
+                 class="hover:cursor-pointer hover:text-yellow peer-checked/novos:text-yellow">Novos</label>
+        </div>
+        <div>
+          <input class="hidden peer/usados" type="radio" name="estado" value="usado" id="usados">
+          <label for="usados"
+                 class="hover:cursor-pointer hover:text-yellow peer-checked/usados:text-yellow">Usados</label>
+        </div>
+      </div>
+      <div class="flex flex-row mx-auto space-x-12 mt-8 text-white">
+        <div>
+          <input class="hidden peer/gasolina" type="radio" name="combustivel" id="gasolina"
+                 value="gasolina">
+          <label for="gasolina"
+                 class="rounded-full hover:text-yellow border-2 p-2 hover:cursor-pointer peer-checked/gasolina:text-yellow"><i
+            class="fa-solid fa-gas-pump"></i></label>
+        </div>
+        <div>
+          <input class="hidden peer/eletrico" type="radio" name="combustivel" value="eletrico"
+                 id="eletrico">
+          <label for="eletrico"
+                 class="rounded-full hover:text-yellow border-2 p-2 hover:cursor-pointer peer-checked/eletrico:text-yellow"><i
+            class="fa-solid fa-bolt"></i></label>
+        </div>
+      </div>
+      <div class="flex flex-wrap bg-white py-5 rounded-2xl border-b-yellow border-b-4 mt-8">
+        <div class="px-2 py-2 w-full  md:w-1/3 lg:w-1/4">
+          <select class="w-full border rounded-xl py-2 px-4 text-gray" name="marcas" id="marca">
+            <option value="default" selected>Todas as marcas</option>
+          </select>
+        </div>
+        <div class="px-2 py-2 w-full  md:w-1/3 lg:w-1/4">
+          <select class=" w-full border rounded-xl py-2 px-4 text-gray" name="modelos" id="modelo">
+            <option value="default" selected>Todas os modelos</option>
+          </select>
+        </div>
+        <div class="px-2 py-2 w-full  md:w-1/3 lg:w-1/4">
+          <input id="price" type="number" placeholder="Digite o preço máximo"
+                 class="w-full border border-gray rounded-xl p-2">
+        </div>
+        <div class="px-2 py-2 w-full lg:w-1/4 md:mx-auto md:w-1/2">
+          <button id="filtrar" class="lg:w-full w-full bg-yellow rounded-2xl py-2 px-6"><i
+            class="text-white fa-solid fa-magnifying-glass"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cars" class="w-full lg:w-8/12 flex flex-wrap mx-auto py-10">
+  </div>
+
+</main>
+<app-footer> </app-footer>
+</body>
